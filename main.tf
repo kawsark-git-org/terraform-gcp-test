@@ -62,6 +62,10 @@ resource "google_compute_instance" "demo" {
 
 }
 
+resource "null_resource" "null_test" {
+
+}
+
 output "external_ip"{
   value = "${google_compute_instance.demo.network_interface.0.access_config.0.assigned_nat_ip}"
 }
